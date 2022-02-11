@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.corpoCalculadora {
+  width: 400px;
+  height: 500px;
+  background-color: rgb(194, 190, 190);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: black 3px 5px 5px 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.visor {
+  width: 80%;
+  height: 60px;
+  background-color: rgb(236, 235, 235);
+  padding: 10px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: black 2px 1px 1px 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.teclado {
+  display: flex;
+  margin-top: 20px;
+  gap: 25px;
+  width: 340px;
+}
+
+.footer {
+  width: 85%;
+  height: 120px;
+  background-color: black;
+  margin-top: 20px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.separadorFooter {
+  width: 90%;
+  height: 2px;
+  border-radius: 30px;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: gray 2px 1px 4px 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 420px) {
+  .corpoCalculadora {
+    transform: scale(0.7);
   }
-  to {
-    transform: rotate(360deg);
+  .teclado {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .teclado {
+    transform: scale(0.9);
   }
 }
